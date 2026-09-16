@@ -51,12 +51,12 @@ public class Number_Analysis {
         int original = start;
         while (original <= end) {
             int reversed = 0;
-            int temp = original;
+            int temporary = original;
 
-            while (temp != 0) {
-                int digit = temp % 10;
+            while (temporary != 0) {
+                int digit = temporary % 10;
                 reversed = reversed * 10 + digit;
-                temp /= 10;
+                temporary /= 10;
             }
 
             if (original == reversed) {
