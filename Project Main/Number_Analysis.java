@@ -77,7 +77,34 @@ public class Number_Analysis {
         }
 
         // For Armstrong Numbers
+        for (int i = start; i <= end; i++) {
 
+            int originalNumber = i;
+            int number = i;
+            int sum = 0;
+            int digits = 0;
+
+            // Count the digits
+            while (number != 0) {
+                digits++;
+                number /= 10;
+            }
+
+            number = i;
+
+            // Calculate the sum
+            while (number != 0) {
+                int digit = number % 10;
+                sum += Math.pow(digit, digits);
+                number /= 10;
+            }
+
+            if (sum == originalNumber) {
+                armstrongCount++;
+                largestArmstrongNum = i;
+            }
+        }
+        
         // For Perfect, Abundant, and Deficient Numbers
         for (int i = start; i <= end; i++) {
             if (i <= 1) {
