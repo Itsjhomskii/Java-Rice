@@ -50,7 +50,13 @@ public class Number_Analysis {
             }
         }
         // For Even And Odd Numbers
-
+        for (int i = start; i <= end; i++) {
+            if (i % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
         // For Palindrome Numbers
         int original = start;
         while (original <= end) {
