@@ -68,11 +68,34 @@ public class Number_Analysis {
 
         // For Armstrong Numbers
 
-        // For Perfect Numbers
+        // For Perfect, Abundant, and Deficient Numbers
+        for (int i = start; i <= end; i++) {
+            if (i <= 1) {
+                deficientCount++;
+                continue;
+            }
+            
+            // Calculate the sum of divisors of start variable
+            int sum = 1;
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    sum += j;
+                    if (j != i / j) {
+                        sum += i / j;
+                    }
+                }
+            }
 
-        // For Abundant Numbers
+            // Check if sum is equal, lesser than, or greater than start variable
+            if (sum == i) {
+                perfectCount++;
+            } else if (sum > i) {
+                abundantCount++;
+            } else {
+                deficientCount++;
+            }
+        }
 
-        // For Deficient Numbers
 
         
         System.out.println("\nPrime Numbers: " + primeCount);
