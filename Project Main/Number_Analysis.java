@@ -15,6 +15,9 @@ public class Number_Analysis {
         int perfectCount = 0;
         int abundantCount = 0;
         int deficientCount = 0;
+        int largestPrimeNum = 0;
+        int largestArmstrongNum = 0;
+        int largestPerfectNum = 0;
 
         System.out.print("Start: ");
         start = input.nextInt();
@@ -41,6 +44,7 @@ public class Number_Analysis {
 
             if (isPrime) {
                 primeCount++;
+                largestPrimeNum = i;
             } else if (isCount) {
                 compositeCount++;
             }
@@ -89,6 +93,7 @@ public class Number_Analysis {
             // Check if sum is equal, lesser than, or greater than start variable
             if (sum == i) {
                 perfectCount++;
+                largestPerfectNum = i;
             } else if (sum > i) {
                 abundantCount++;
             } else {
@@ -96,16 +101,23 @@ public class Number_Analysis {
             }
         }
 
+        System.out.println("\n====== NUMBER ANALYSIS REPORT ======");
 
+        System.out.println("\nRange: " + start + " - " + end);
         
         System.out.println("\nPrime Numbers: " + primeCount);
         System.out.println("Composite Numbers: " + compositeCount);
         System.out.println("Even Numbers: " + evenCount);
         System.out.println("Odd Numbers: " + oddCount);
-        System.out.println("Palindrome Numbers: " + palindromeCount);
+
+        System.out.println("\nPalindrome Numbers: " + palindromeCount);
         System.out.println("Armstrong Numbers: " + armstrongCount);
         System.out.println("Perfect Numbers: " + perfectCount);
         System.out.println("Abundant Numbers: " + abundantCount);
         System.out.println("Deficient Numbers: " + deficientCount);
+
+        System.out.println("\nLargest Prime: " + largestPrimeNum);
+        System.out.println("Largest Perfect Number: " + largestPerfectNum);
+        System.out.println("Largest Armstrong Number: " + largestArmstrongNum);
     }
 }
