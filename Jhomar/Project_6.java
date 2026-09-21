@@ -63,7 +63,7 @@ public class Project_6 {
 
         } while (choice != 7);
 
-        System.out.println("Program ended.");
+        System.out.println("Goodbye!");
 
         input.close();
     }
