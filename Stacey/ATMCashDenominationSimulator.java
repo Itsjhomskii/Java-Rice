@@ -26,6 +26,9 @@ public class ATMCashDenominationSimulator {
         do {
             System.out.print("Withdrawal: ₱");
             withdraw = scanner.nextInt();
+            if (withdraw == 0) {
+                System.out.println("\nInvalid withdrawal amount.\n");
+            }
 
             int remainAmount = 0;
             while (withdraw != 0) {
