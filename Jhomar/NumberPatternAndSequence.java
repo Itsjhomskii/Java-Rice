@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Project_6 {
+public class NumberPatternAndSequence {
 
     public static void main(String[] args) {
 
